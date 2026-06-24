@@ -23,7 +23,10 @@ public class BfhlController {
     }
 
     @GetMapping("/health")
-    public ResponseEntity<Map<String, String>> health() {
-        return ResponseEntity.ok(Map.of("status", "UP"));
+    public ResponseEntity<Map<String, Object>> health() {
+        return ResponseEntity.ok(Map.of(
+                "is_success", true,
+                "official_email", "ojasvita0756.be23@chitkara.edu.in"
+        ));
     }
 }
